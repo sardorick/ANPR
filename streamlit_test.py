@@ -68,6 +68,7 @@ if menu == 'Home':
             reader = easyocr.Reader(['en'])
             result = reader.readtext(cropped_image)
             font = cv2.FONT_HERSHEY_SIMPLEX
+            st.write(result)
             res = cv2.putText(img, text=result[0][-2], org=(approx[0][0][0]+50, approx[1][0][1]+50), fontFace=font, fontScale=1, color=(0,255,0), thickness=2, lineType=cv2.LINE_AA)
             res = cv2.rectangle(img, tuple(approx[0][0]), tuple(approx[2][0]), (0,255,0),3)
             res = cv2.cvtColor(res, cv2.COLOR_BGR2RGB)

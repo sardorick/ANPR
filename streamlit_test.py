@@ -6,12 +6,12 @@ import numpy as np
 import cv2
 import easyocr
 import imutils
-from PIL import Image
 from streamlit_option_menu import option_menu
 import csv
 import uuid
 import pandas as pd
-
+import os
+from PIL import Image
 # helper function to save files to a csv file
 def save_results(text, csv_filename, path):
     img_name = f'{uuid.uuid1()}.jpg'
